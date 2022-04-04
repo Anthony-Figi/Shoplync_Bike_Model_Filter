@@ -1,0 +1,353 @@
+/**
+* 2007-2022 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2022 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+
+
+/*
+Custom Module Styles
+
+border: 1px solid #cac7c7;
+    box-shadow: 0 0 7px 0px rgb(0 0 0 / 20%);
+
+*/
+.mx-0-auto 
+{
+    margin: 0 auto;
+}
+select.form-control {
+    border-radius:10px;
+}
+.clearfix {
+    clear:both;
+}
+body#search .bikeModelFilter{
+    display:block;
+}
+.promptBox
+{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.bikeModelFilter{
+    background-color: #141414;
+}
+.bikeModelFilter h1,
+.bikeModelFilter h2,
+.bikeModelFilter h4,
+.bikeModelFilter em,
+.bikeModelFilter strong{
+    color:#fff;
+}
+.bikeModelFilter hr {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+.img-bg {
+    background-image: url('../img/footer-bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+/* Styles For Homepage Only */
+body#index .img-bg {
+    background-image:none;
+}
+body#index .bikeModelFilter{
+    background-color: #fff;
+    border: 1px solid #cac7c7;
+    box-shadow: 0 0 7px 0px rgb(0 0 0 / 20%);
+}
+body#index .bikeModelFilter h2,
+body#index #filterCheckboxes label,
+body#index #filterFromGarage h4,
+body#index .bikeModelFilter em, 
+body#index .bikeModelFilter strong,
+body#index #filterOptions span.control-label{
+    color:#141414;
+    font-weight:bold;
+}
+body#index .bikeModelFilter hr {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+body#fitmentsearch .bikeModelFilter h1{
+    color:white;
+}
+#filterCheckboxes input:nth-child(3){
+    margin-left:2em;
+}
+#filterCheckboxes label {
+    color:white;
+    padding: 0 5px;
+}
+#filterOptions {
+    padding: 10px;
+    margin-bottom:10px;
+    text-align:center;
+}
+#filterOptions input {
+    max-width:5em;
+    display:inline-block;
+}
+#filterOptions span.control-label {
+    color: white;
+    margin: 0 10px;
+    display:inline-block;
+}
+#filterOptions select.form-control 
+{
+    max-width: 9em;
+}
+#filterOptions select.form-control,
+#add-a-bike select.form-control {
+    display:inline-block;
+    border-radius: 10px;
+}
+#filterOptions select.form-control:disabled 
+{
+   /* background-color: #d7d7d7!important; */
+}
+
+#modelFilterButton, .modelFilterButton {
+    margin: 0 10px;
+}
+@media (max-width: 1350px)
+{
+    .img-bg {
+        background-image: url('../img/bg.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+    }
+}
+@media (min-width: 1163px) and (max-width: 1350px){
+    #filterOptions .filterButton{
+        display: block;
+        margin: 10px auto;    
+        width: 100%;
+        max-width: 35%;
+    }
+}
+@media (min-width: 936px) and (max-width: 1162px){
+    #filterOptions .filterButton{
+        display: block;
+        margin: 10px auto;    
+        width: 100%;
+        max-width: 35%;
+    }
+    #filterOptions > span.control-label ~ span.control-label,
+    #filterOptions > select.form-control ~ select.form-control {
+        display: inline-block;
+    }
+    #filterOptions > span.control-label {
+        display: block;
+    }
+    #filterOptions > select.form-control {
+        display: block;
+        margin: 5px auto;
+    }
+}
+@media (min-width: 769px) and (max-width: 935px){
+    #filterOptions .filterButton{
+        display: block;
+        margin: 10px auto;    
+        width: 100%;
+        max-width: 40%;
+    }
+    #filterOptions > span.control-label ~ span.control-label ~ span.control-label,
+    #filterOptions > select.form-control ~ select.form-control ~ select.form-control {
+        display: inline-block;
+        max-width: 9em;
+    }
+    #filterOptions > span.control-label {
+        display: block;
+    }
+    #filterOptions > select.form-control {
+        display: block;
+        margin: 5px auto;
+        width: 100%;
+        max-width: 40%;
+    }
+}
+@media (max-width: 768px){
+    #filterOptions .filterButton{
+        display: block;
+        margin: 10px auto;    
+        width: 100%;
+        max-width: 50%;
+    }
+    #filterOptions > span.control-label {
+        display: block;
+    }
+    #filterOptions > select.form-control {
+        display: block;
+        margin: 5px auto;
+        width: 100%;
+        max-width: 50%;
+    }
+}
+.filterButton:disabled,
+.filterButton:disabled:hover {
+    cursor: not-allowed!important;
+    opacity: 0.65;
+}
+.filterButton:hover {
+    background:#e31d27;
+    color:#fff;
+    box-shadow: 0 0 8px 4px rgb(227 29 39 / 80%);
+    cursor:pointer !important;
+}
+.filterButton,
+.filterButton:disabled:hover {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight:bold;
+    border: 3px solid #e31d27;
+    color:#e31d27;
+    background:#fff;
+    box-shadow: none;
+}
+/*
+ My Garage Styles
+*/
+#my-garage .prefered-container{
+    border: 1px solid #cac7c7 !important;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0px rgb(0 0 0 / 20%);
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+#my-garage .prefered-container .left-block{
+    width: 20%;
+}
+#my-garage .prefered-container .right-block .product-description h5 em{
+    font-weight:normal;
+}
+#my-garage .prefered-container .right-block .product-description button.btn {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+}
+#my-garage .prefered-container .right-block {
+    width:80%;
+}
+#my-garage .prefered-container .left-block,
+#my-garage .prefered-container .right-block {
+    float: left;
+}
+#vehicle-model-table tbody tr td img{
+    max-width:70px;
+}
+#vehicle-model-table tbody tr{
+    vertical-align:middle!important;
+}
+#add-a-bike .form-control{
+    margin-bottom:1em;
+}
+@media (max-width: 991px)
+{
+    #my-garage .prefered-container .left-block{
+        width: 60%;
+    }
+    #my-garage .prefered-container .right-block{
+        width: 100%;
+    }
+    #my-garage .prefered-container .left-block,
+    #my-garage .prefered-container .right-block{
+        clear:both;
+        float:none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #my-garage .prefered-container .right-block .product-description .new-vehicle-name,
+    #my-garage .prefered-container .right-block .product-description button.btn.edit-prefered-name    {
+        margin: 5px auto !important;
+    }
+}
+
+/* Garage Table Styles */
+td.vehicle-name input.new-vehicle-name {
+    display:block;
+    margin-bottom:10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #999797;
+}
+td.vehicle-name button.new-vehicle-name {
+    display:inline-block;
+}
+
+/*
+ Vehicle Fitment Styles
+*/
+.verified {
+    border: 2px solid #7fc87f;
+    box-shadow: inset 0 0 0 4px #dff7df;
+    background: #dff7df;
+}
+.not-verified {
+    border: 2px solid #c40000;
+    box-shadow: inset 0 0 0 4px #fcf4f4;
+    background: #fcf4f4;
+}
+.fitment-warning {
+    border: 2px solid #febd69;
+    box-shadow: inset 0 0 0 4px #fff3cd;
+    background: #fff3cd;
+}
+.fitment-info {
+    border: 2px solid #004085;
+    box-shadow: inset 0 0 0 4px #cce5ff;
+    background: #cce5ff;
+}
+.fitment-prompt {
+    border: 2px solid #c3c1c1;
+    box-shadow: inset 0 0 0 4px #f6f6f6;
+    background: #f6f6f6;
+}
+#fitment-prompt i.material-icons{
+    font-weight: bold;
+    font-size: 2.1em;
+}
+.verified i.material-icons {
+    color:#4cbb6c;
+}
+.not-verified i.material-icons {
+    color:#e31d27;
+}
+.fitment-warning i.material-icons {
+    color:#febd69;
+}
+.fitment-info i.material-icons {
+    color:#004085;
+}
+.fitment-prompt i.material-icons {
+    color:#c3c1c1;
+}
