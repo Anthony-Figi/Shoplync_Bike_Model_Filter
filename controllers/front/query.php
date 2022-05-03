@@ -10,7 +10,12 @@
 * @link      http://www.shoplync.com/
 */
 
-include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+
+if(!class_exists('dbg'))
+{
+    include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+    class_alias(get_class($shoplync_dbg), 'dbg');
+}
 
 /**
  * Class itself

@@ -17,7 +17,12 @@ use Symfony\Component\Translation\TranslatorInterface;
 use PrestaShop\PrestaShop\Core\Product\Search\SortOrder;
 use PrestaShop\PrestaShop\Core\Product\Search\SortOrderFactory;
 
-include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+
+if(!class_exists('dbg'))
+{
+    include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+    class_alias(get_class($shoplync_dbg), 'dbg');
+}
 
 class FitmentFilterSearchProvider implements ProductSearchProviderInterface {
  

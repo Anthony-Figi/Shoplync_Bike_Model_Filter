@@ -24,14 +24,12 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
-if (!defined('_PS_VERSION_')) {
+if (!defined('_PS_VERSION_') || class_exists('dbg')) {
     exit;
 }
 
-define('DBG_ON', true);
-
-class dbg 
-{
+$shoplync_dbg = new class {
+    
     /**
     * This function will simply print to error log if message is not null and if the global variable DBG_ON is true
     *
@@ -40,8 +38,9 @@ class dbg
     */
     public static function m($message = null, $forceMsg = false)
     {
-        if($message != null && (DBG_ON || $forceMsg))
+        $dbg_enabled = !defined('DBG_ON') ? true : DBG_ON;
+        if($message != null && ($dbg_enabled || $forceMsg))
             error_log($message);
     }
-}
+};
 

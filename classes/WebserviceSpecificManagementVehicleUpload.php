@@ -15,8 +15,11 @@ use PrestaShop\PrestaShop\Core\File\FileUploader;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\Response;
 
-include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
-
+if(!class_exists('dbg'))
+{
+    include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+    class_alias(get_class($shoplync_dbg), 'dbg');
+}
 /**
  * This class is responsible for managing VehicleFitments through webservice
  */

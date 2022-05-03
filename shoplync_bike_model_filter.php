@@ -37,7 +37,13 @@ include_once dirname (__FILE__).'/classes/Vehicle.php';
 include_once dirname (__FILE__).'/classes/WebserviceSpecificManagementVehicleUpload.php';
 include_once dirname (__FILE__).'/classes/FitmentFilterSearchProvider.php';
 
-include_once dirname (__FILE__).'/classes/helper.php';
+
+
+if(!class_exists('dbg'))
+{
+    include_once dirname (__FILE__).'/classes/helper.php';
+    class_alias(get_class($shoplync_dbg), 'dbg');
+}
 
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchQuery;
 
