@@ -16,7 +16,11 @@ use PrestaShop\PrestaShop\Adapter\Image\ImageRetriever;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchResult;
 
 include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/FitmentFilterSearchProvider.php';
-include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+if(!class_exists('dbg'))
+{
+    include_once dirname (_PS_MODULE_DIR_).'/modules/shoplync_bike_model_filter/classes/helper.php';
+    class_alias(get_class($shoplync_dbg), 'dbg');
+}
 
 abstract class FitmentFilterProductListingFrontController extends ProductListingFrontController {
  
