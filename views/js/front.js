@@ -169,7 +169,7 @@ function clearFilterCookie()
         type: 'POST',
         cache: false,
         dataType: 'json',
-        url: adminajax_link, 
+        url: bike_model_adminajax_link, 
         data: {
             ajax: true,
             action: 'clearSelectionCookie',//lowercase with action name
@@ -224,7 +224,7 @@ function setFilterFromVehicleID(thisElement = null, vehicle_id = null)
             type: 'POST',
             cache: false,
             dataType: 'json',
-            url: adminajax_link, 
+            url: bike_model_adminajax_link, 
             data: {
                 ajax: true,
                 action: 'getVehicleDetails',//lowercase with action name
@@ -400,7 +400,7 @@ function typeChanged(e, thisElement)
             type: 'POST',
             cache: false,
             dataType: 'json',
-            url: adminajax_link, 
+            url: bike_model_adminajax_link, 
             data: {
                 ajax: true,
                 action: 'getMakes',//lowercase with action name
@@ -447,7 +447,7 @@ function makeChanged(e, thisElement) {
                 type: 'POST',
                 cache: false,
                 dataType: 'json',
-                url: adminajax_link, 
+                url: bike_model_adminajax_link, 
                 data: {
                     ajax: true,
                     action: 'getModels',//lowercase with action name
@@ -505,7 +505,7 @@ function modelChanged(e, thisElement)
                 type: 'POST',
                 cache: false,
                 dataType: 'json',
-                url: adminajax_link, 
+                url: bike_model_adminajax_link, 
                 data: {
                     ajax: true,
                     action: 'getYears',//lowercase with action name
@@ -583,7 +583,7 @@ function resetFilter()
             type: 'POST',
             cache: false,
             dataType: 'json',
-            url: adminajax_link, 
+            url: bike_model_adminajax_link, 
             data: {
                 ajax: true,
                 action: 'getMakes',//lowercase with action name
@@ -702,7 +702,7 @@ function SaveModel()
             type: 'POST',
             cache: false,
             dataType: 'json',
-            url: adminajax_link, 
+            url: bike_model_adminajax_link, 
             data: {
                 ajax: true,
                 action: 'addToGarage',//lowercase with action name
@@ -786,7 +786,7 @@ function preferedChanged(currentSelect)
             type: 'POST',
             cache: false,
             dataType: 'json',
-            url: adminajax_link, 
+            url: bike_model_adminajax_link, 
             data: {
                 ajax: true,
                 action: 'updatePrefered',//lowercase with action name
@@ -831,7 +831,7 @@ function MakePrefered(currentBtn)
                 type: 'POST',
                 cache: false,
                 dataType: 'json',
-                url: adminajax_link, 
+                url: bike_model_adminajax_link, 
                 data: {
                     ajax: true,
                     action: 'updatePrefered',//lowercase with action name
@@ -929,7 +929,7 @@ function EditEntry(currentBtn, setNewName = false, toggle = true)
                 type: 'POST',
                 cache: false,
                 dataType: 'json',
-                url: adminajax_link, 
+                url: bike_model_adminajax_link, 
                 data: {
                     ajax: true,
                     action: 'updateVehicleName',//lowercase with action name
@@ -1079,7 +1079,7 @@ function EditImage(buttonElement, sendUpload = false)
                 cache: false,
                 contentType: false,
                 processData: false,
-                url: adminajax_link, 
+                url: bike_model_adminajax_link, 
                 data: form_data,
                 success : function (data) {
                     if(data)
@@ -1128,7 +1128,7 @@ function changeFitmentMake(selectElement)
             type: 'POST',
             cache: false,
             dataType: 'json',
-            url: adminajax_link, 
+            url: bike_model_adminajax_link, 
             data: {
                 ajax: true,
                 action: 'getFitmentModels',//lowercase with action name
@@ -1185,7 +1185,7 @@ function startFilter()
         type: 'POST',
         cache: false,
         dataType: 'json',
-        url: adminajax_link, 
+        url: bike_model_adminajax_link, 
         data: {
             ajax: true,
             action: 'doSearch',//lowercase with action name

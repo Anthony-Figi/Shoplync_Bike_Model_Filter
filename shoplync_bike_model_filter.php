@@ -327,7 +327,7 @@ class Shoplync_bike_model_filter extends Module
         //
         //$this->context->link->getAdminLink('shoplync_bike_model_filter')
         Media::addJsDef([
-            'adminajax_link' => $this->context->link->getModuleLink('shoplync_bike_model_filter', 'query', array(), true),
+            'bike_model_adminajax_link' => $this->context->link->getModuleLink('shoplync_bike_model_filter', 'query', array(), true),
             'ps_customer_id' => $this->context->customer->id,
             'ps_product_id' => '',
             'ps_attribute_id' => ''
